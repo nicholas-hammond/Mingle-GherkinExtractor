@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ThoughtWorksGoLib</name>
+    </assembly>
+    <members>
+        <member name="T:ThoughtWorksGoLib.GoServer">
+            <summary>
+            Represents an instance of a GO server supporting http/https requests
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksGoLib.GoServer.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new GO server
+            </summary>
+            <param name="host">URL of the GO server</param>
+            <param name="login">Login name</param>
+            <param name="password">Password</param>
+        </member>
+        <member name="M:ThoughtWorksGoLib.GoServer.#ctor(System.String,System.String,System.Security.SecureString)">
+            <summary>
+            Creates a new GO server
+            </summary>
+            <param name="host">URL of the GO server</param>
+            <param name="login">Login name</param>
+            <param name="password">Password</param>
+        </member>
+        <member name="M:ThoughtWorksGoLib.GoServer.GetPipelineList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ThoughtWorksGoLib.GoPipeline">
+            <summary>
+            Class describing a pipeline
+            </summary>
+        </member>
+    </members>
+</doc>

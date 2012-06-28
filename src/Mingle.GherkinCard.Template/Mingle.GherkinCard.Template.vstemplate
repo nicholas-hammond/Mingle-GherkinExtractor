@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Mingle Gherkin Card Link File</Name>
+    <Description>A file that links to a card in Mingle and extracts the Gherkin syntax into a feature file.</Description>
+    <Icon>Mingle.ico</Icon>
+    <TemplateID>99d4f927-0987-4c5b-b44f-c10af847bf04</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Gherkin.card</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+		<References>
+			<Reference>
+				<Assembly>System</Assembly>
+			</Reference>
+		</References>
+
+    <ProjectItem ReplaceParameters="true" CustomTool="GherkinCardToFeatureFileGenerator">Gherkin.card</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

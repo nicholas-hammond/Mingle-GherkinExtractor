@@ -1,0 +1,827 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ThoughtWorksCoreLib</name>
+    </assembly>
+    <members>
+        <member name="T:ThoughtWorksCoreLib.IWebApi">
+            <summary>
+            IWebApi interface
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.IWebApi.Get(System.String)">
+            <summary>
+            Returns XML
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.WebApi">
+            <summary>
+            Class for WebApi
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.WebApi.#ctor(ThoughtWorksCoreLib.IWeb,System.String)">
+            <summary>
+            Establishes WebApi
+            </summary>
+            <param name="web"></param>
+            <param name="hostname"></param>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.WebApi.Get(System.String)">
+            <summary>
+            Returns XML
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.At">
+            <summary>
+              Looks up a localized string similar to @.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.BuildNotification">
+            <summary>
+              Looks up a localized string similar to Build notifications from Go has yet to be implemented..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CancelLabel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CannotBeNullOrEmpty">
+            <summary>
+              Looks up a localized string similar to Cannot be null or empty.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CanNotCreateWindow">
+            <summary>
+              Looks up a localized string similar to Can not create tool window..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CannotInterpretResponse">
+            <summary>
+              Looks up a localized string similar to Check to see that you are not using HTTPS on an HTTP connection or vise versa..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardCreatedByLogin">
+            <summary>
+              Looks up a localized string similar to Created By.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardCreatedByName">
+            <summary>
+              Looks up a localized string similar to Created By.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardCreatedOn">
+            <summary>
+              Looks up a localized string similar to Created On.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardDescription">
+            <summary>
+              Looks up a localized string similar to Description.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardId">
+            <summary>
+              Looks up a localized string similar to Id.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardModifiedBy">
+            <summary>
+              Looks up a localized string similar to Modified By.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardModifiedByLogin">
+            <summary>
+              Looks up a localized string similar to Modified By.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardModifiedByName">
+            <summary>
+              Looks up a localized string similar to Modified By.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardModifiedOn">
+            <summary>
+              Looks up a localized string similar to Modified On.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardName">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardNotFound">
+            <summary>
+              Looks up a localized string similar to The card could not be found:.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardNumber">
+            <summary>
+              Looks up a localized string similar to Number.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardProjectId">
+            <summary>
+              Looks up a localized string similar to Project Id.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardProjectName">
+            <summary>
+              Looks up a localized string similar to Project Name.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardRank">
+            <summary>
+              Looks up a localized string similar to Rank.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardsAllCommandCallback">
+            <summary>
+              Looks up a localized string similar to All Cards Command Callback..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardSetIsEmpty">
+            <summary>
+              Looks up a localized string similar to No cards satisfied the search criteria..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardSetWindowTitle">
+            <summary>
+              Looks up a localized string similar to Cards (%%project%%).
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardSetWindowTitleStories">
+            <summary>
+              Looks up a localized string similar to List of Stories (%%project%%).
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardsThisUserCommandCallback">
+            <summary>
+              Looks up a localized string similar to Cards for This User Command Callback..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardType">
+            <summary>
+              Looks up a localized string similar to Type.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardVersion">
+            <summary>
+              Looks up a localized string similar to Version.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CardWindowCaption">
+            <summary>
+              Looks up a localized string similar to Card {0} - {1}.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.CheckYourSettings">
+            <summary>
+              Looks up a localized string similar to Check your settings.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ClickToEdit">
+            <summary>
+              Looks up a localized string similar to Click on the field to edit its value.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ClickToMakeTransition">
+            <summary>
+              Looks up a localized string similar to Click to make this transition.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.Colon">
+            <summary>
+              Looks up a localized string similar to :.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ExplorerCommandCallback">
+            <summary>
+              Looks up a localized string similar to Explorer Command Callback..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ExplorerViewCaption">
+            <summary>
+              Looks up a localized string similar to ThoughtWorks Explorer.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackDataUnsubmittedWarning">
+            <summary>
+              Looks up a localized string similar to The window is closing and may include data that has not been submitted. Do you wish to proceed? Click No to return to the form..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackDescriptionToolTip">
+            <summary>
+              Looks up a localized string similar to The first fifty characters becomes the subject of this item in email..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackEmailSubject">
+            <summary>
+              Looks up a localized string similar to Feedback: Visual Studio Connector.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackFormCompanyLabel">
+            <summary>
+              Looks up a localized string similar to Company Name.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackFormDescriptionLabel">
+            <summary>
+              Looks up a localized string similar to Description.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackFormEmailLabel">
+            <summary>
+              Looks up a localized string similar to Email Address.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackFormTitle">
+            <summary>
+              Looks up a localized string similar to ThoughtWorks Visual Studio Connector Feedback.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackFormTitleLabel">
+            <summary>
+              Looks up a localized string similar to Title.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackTypeDefect">
+            <summary>
+              Looks up a localized string similar to Defect.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.FeedbackTypeFeature">
+            <summary>
+              Looks up a localized string similar to Feature Resuest.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.GoPipelinePropertiesCaption">
+            <summary>
+              Looks up a localized string similar to Build Results.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.HostnameIsEmpty">
+            <summary>
+              Looks up a localized string similar to Host name cannot be empty.\n.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.InvalidProtocol">
+            <summary>
+              Looks up a localized string similar to The host name is malformed. The protocol must be either HTTP or HTTPS.\n.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.IvsOutputWindowAccessFail">
+            <summary>
+              Looks up a localized string similar to Failed to get a reference to IVsOutputWindow.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MalformedHostnameVarious">
+            <summary>
+              Looks up a localized string similar to Host name is malformed and must be like https://domain[:port] or http://domain[:port]\n.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MessageMurmurCommitted">
+            <summary>
+              Looks up a localized string similar to Murmur Accepted.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleApiSegment">
+            <summary>
+              Looks up a localized string similar to /api/v2.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleCardNameNullOrEmpty">
+            <summary>
+              Looks up a localized string similar to The &quot;Name&quot; field may not be blank or empty..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleCardSegment">
+            <summary>
+              Looks up a localized string similar to /cards/&amp;&amp;card-no&amp;&amp;.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleCardSetSegment">
+            <summary>
+              Looks up a localized string similar to /cards.xml.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleCardTypesLoadingError">
+            <summary>
+              Looks up a localized string similar to There was a problem loading Mingle Card Types..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleCardUpdateError">
+            <summary>
+              Looks up a localized string similar to Update attempt for this card has failed. The response received from the Mingle server is: [httpstatus].
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleFavoritesLoadingError">
+            <summary>
+              Looks up a localized string similar to There was a problem loading Mingle Favorites..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleNotRunning">
+            <summary>
+              Looks up a localized string similar to Mingle or Go do not appear to be running. Try browsing to Mingle from a browser, then try this query again. This may also be caused by an errorneous URL for the Host or invalid credentials..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleProjectsSegment">
+            <summary>
+              Looks up a localized string similar to /projects.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MinglePropertiesLoadingError">
+            <summary>
+              Looks up a localized string similar to There was a problem loading Mingle Properties..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleTeamMembersLoadingError">
+            <summary>
+              Looks up a localized string similar to There was a problem loading Mingle Team members..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleTransitionSetSegment">
+            <summary>
+              Looks up a localized string similar to /cards/&amp;&amp;card-no&amp;&amp;/transitions.xml.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MingleTransitionsLoadingError">
+            <summary>
+              Looks up a localized string similar to There was a problem loading Mingle Transitions..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MissingMingleConnectionInformation">
+            <summary>
+              Looks up a localized string similar to The host url, login name and password are all required for connecting to Mingle. One of them is empty or null..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MissingOrInvalidCredentialData">
+            <summary>
+              Looks up a localized string similar to One or more of the user, password, host or project settings required for Mingle interaction appear to be missing or invalid. Would you like to edit them now?.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MissingOrInvalidSetting">
+            <summary>
+              Looks up a localized string similar to A setting is missing or invalid..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.MustBeMingleUrlSegment">
+            <summary>
+              Looks up a localized string similar to The URL paramater must be in the form &quot;/api/v2/[project]/... . Host name will be added by MingleServer..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.NewCardDefaultName">
+            <summary>
+              Looks up a localized string similar to New card.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.OtherConnectionError">
+            <summary>
+              Looks up a localized string similar to There was a problem connecting to the Mingle or Go. Some of the ThoughtWorks Exploer tree may not have been loaded. Please check your settings for a misspelled project name or similar issue..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.OutputWindowAccessFail">
+            <summary>
+              Looks up a localized string similar to Failed to get a reference to the Output window General pane.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.OutputWindowWriteFail">
+            <summary>
+              Looks up a localized string similar to Failed to write on the Output window.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PackageIsNull">
+            <summary>
+              Looks up a localized string similar to Package property is null..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PipelineSearchError">
+            <summary>
+              Looks up a localized string similar to There was a problem querying pipeline properties..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PleaseSelectRowFirst">
+            <summary>
+              Looks up a localized string similar to Please select (click on) a row in the list..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ProductDetails">
+            <summary>
+              Looks up a localized string similar to Extends Visual Studio to allow context-relevant connection to Mingle and GO..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ProductId">
+            <summary>
+              Looks up a localized string similar to MG-VSIX.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ProjectIsRequired">
+            <summary>
+              Looks up a localized string similar to The ProjectId is null or empty. It is required..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PropertyCouldNotBeUpdated">
+            <summary>
+              Looks up a localized string similar to A property or field could not be updated..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PropertyOutOfRange">
+            <summary>
+              Looks up a localized string similar to The value of the property is out of range, null or empty. A valid value is required..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PropertyValueCurrentIteration">
+            <summary>
+              Looks up a localized string similar to (Current Iteration).
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PropertyValueNotSet">
+            <summary>
+              Looks up a localized string similar to (not set).
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.PropertyValueSelectCard">
+            <summary>
+              Looks up a localized string similar to select card....
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.SettingsDataIsDirty">
+            <summary>
+              Looks up a localized string similar to You have made settings changes that have not been saved. Would you like to save them, now?.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.Slash">
+            <summary>
+              Looks up a localized string similar to /.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.SubmitLabel">
+            <summary>
+              Looks up a localized string similar to Submit.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TheTypeMustBeSerializable">
+            <summary>
+              Looks up a localized string similar to The type must be serializable..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TransitionAdmonitionLabel">
+            <summary>
+              Looks up a localized string similar to Please enter a comment in the box below and close this form..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TransitionCannotBeApplied">
+            <summary>
+              Looks up a localized string similar to The transition could not be applied..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TransitionCommentRequired">
+            <summary>
+              Looks up a localized string similar to You must provide a comment for this transition. Do you wish to supply a comment?.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TransitionEquals">
+            <summary>
+              Looks up a localized string similar to Transition = .
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TransitionIsNull">
+            <summary>
+              Looks up a localized string similar to Please select a transition..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TransitionWindowTitle">
+            <summary>
+              Looks up a localized string similar to Transition Comment.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.TwSettingsCommandCallback">
+            <summary>
+              Looks up a localized string similar to Mingle/Go Settings Command Callback..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.UrlPropertyIsNullOrEmpty">
+            <summary>
+              Looks up a localized string similar to The Url property is null or empty..
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Resources.ViewNotUsableFromVisualStudio">
+            <summary>
+              Looks up a localized string similar to This view is not available in Visual Studio..
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.IResponse">
+            <summary>
+            Returns an HttpWebresponse
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.IResponse.Body">
+            <summary>
+            Response body
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.IResponse.Headers">
+            <summary>
+            Response headers
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.Web">
+            <summary>
+            Class implementing IWeb
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.IWeb">
+            <summary>
+            IWeb interface
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.IWeb.Get(System.String)">
+            <summary>
+            Performs a GET and returns HttpWebresponse
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.IWeb.Get(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a GET and returns HttpWebresponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.IWeb.Put(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a PUT and returns HttpWebresponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.IWeb.Post(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a POST and returns HttpWebresponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.IWeb.Delete(System.String)">
+            <summary>
+            Performs a DELETE and returns HttpWebresponse
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.#ctor">
+            <summary>
+            Constructs a new Web
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.#ctor(System.Action{System.Net.HttpWebRequest})">
+            <summary>
+            Performs Action on Web
+            </summary>
+            <param name="authenticate"></param>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.#ctor(System.Action{System.Net.HttpWebRequest},System.Action{System.Net.HttpWebRequest})">
+            <summary>
+            Performs Action on Web
+            </summary>
+            <param name="authenticate"></param>
+            <param name="packPostData"></param>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.Get(System.String)">
+            <summary>
+            Returns an HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.Get(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Returns an HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.Put(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performns a PUT and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.Post(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performns a POST and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.Delete(System.String)">
+            <summary>
+            Performns a DELETE and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.Web.Response">
+            <summary>
+            Web response with body and headers only
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.Web.Response.#ctor(System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            Sets the response body
+            </summary>
+            <param name="headers"></param>
+            <param name="body"></param>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Web.Response.Body">
+            <summary>
+            Returns the response body
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.Web.Response.Headers">
+            <summary>
+            Returns the response headers
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.AuthenticatingWeb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.AuthenticatingWeb.#ctor(System.String,System.String)">
+            <summary>
+            Constructs an AutnenticatingWeb that is used to wrap an HttpWebRequest with authentication
+            </summary>
+            <param name="login"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.AuthenticatingWeb.Get(System.String)">
+            <summary>
+            Performns a GET and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.AuthenticatingWeb.Get(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performns a GET and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.AuthenticatingWeb.Put(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performns a PUT and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.AuthenticatingWeb.Post(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performns a POST and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.AuthenticatingWeb.Delete(System.String)">
+            <summary>
+            Performns a DELETE and returns HttpWebResponse
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.AuthenticatingWeb.Authenticate(System.Net.HttpWebRequest)">
+            <summary>
+            Add credentials to the request
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.ViewIdentifiers">
+            <summary>
+            Used to uniquely identify different views.
+            </summary>
+        </member>
+        <member name="F:ThoughtWorksCoreLib.ViewIdentifiers.Card">
+            <summary>
+            Mingle card identifier
+            </summary>
+        </member>
+        <member name="F:ThoughtWorksCoreLib.ViewIdentifiers.CardSet">
+            <summary>
+            Mingle card set identifier
+            </summary>
+        </member>
+        <member name="F:ThoughtWorksCoreLib.ViewIdentifiers.Settings">
+            <summary>
+            Settings identifier
+            </summary>
+        </member>
+        <member name="F:ThoughtWorksCoreLib.ViewIdentifiers.PipelineProperties">
+            <summary>
+            PipelineProperties identifier
+            </summary>
+        </member>
+        <member name="F:ThoughtWorksCoreLib.ViewIdentifiers.CardSetFiltered">
+            <summary>
+            Filtered card set identifier
+            </summary>
+        </member>
+        <member name="F:ThoughtWorksCoreLib.ViewIdentifiers.Explorer">
+            <summary>
+            Explorer identifier
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.ViewIdentifiers.#ctor">
+            <summary>Private constructor</summary>
+            <remarks>
+            This private constructor is here to prevent the compiler from
+            generating a default constructor for a class composed of only
+            a bunch of static data.
+            </remarks>
+        </member>
+        <member name="T:ThoughtWorksCoreLib.TraceLog">
+            <summary>
+            Maintains a log of application activity.
+            </summary>
+        </member>
+        <member name="F:ThoughtWorksCoreLib.TraceLog._fs">
+            <summary>
+            FileStream used to write the log to disc.
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.TraceLog.Initialize(System.String)">
+            <summary>
+            Initializes a new log
+            </summary>
+            <param name="appName">Name of the application</param>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.TraceLog.WriteLine(System.String,System.String)">
+            <summary>
+            Works like Trace.WriteLine but also flushes cache
+            </summary>
+            <param name="methodName"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:ThoughtWorksCoreLib.TraceLog.Exception(System.String,System.Exception)">
+            <summary>
+            Logs details about an exception.
+            </summary>
+            <param name="methodName"></param>
+            <param name="e"></param>
+            <remarks>
+            Recurses through a stack of InnerExceptions if needed.</remarks>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.TraceLog.Tracing">
+            <summary>
+            Turn tracing logging on/off
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.TraceLog.TraceEntryAndExit">
+            <summary>
+            Turn method entry and exit logging on/off
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.TraceLog.Log">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksCoreLib.TraceLog.FilePath">
+            <summary>
+            FilePath of the log where tracing is written.
+            </summary>
+        </member>
+    </members>
+</doc>

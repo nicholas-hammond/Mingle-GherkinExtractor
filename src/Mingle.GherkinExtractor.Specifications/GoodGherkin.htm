@@ -1,0 +1,18 @@
+﻿<pre class="Gherkin">Background:
+
+    <span class="Keyword">Given</span> I am signed in as an admin
+
+<span class="Keyword">Scenario:</span> Admin required
+
+    Given I am not signed in
+    When I go to the filename_infos page
+    Then I should see "Access denied. You must be an admin to access this page."
+
+Scenario: Import a raw file
+
+    Given I am on the filename_infos page
+    When I follow "IMPORT" on the row containing "ZN__TEMP__VAL"
+    Then I should see "Imported 5 readings"
+    And I should see "Destroy" on the row containing "ZN__TEMP__VAL"
+
+</pre>

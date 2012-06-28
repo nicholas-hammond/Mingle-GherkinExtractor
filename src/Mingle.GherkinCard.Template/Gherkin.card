@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <!--Here you set the card number to the card you want to download from the mingle server-->
+<card number = "1" />
+  

@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="At" xml:space="preserve">
+    <value>@</value>
+  </data>
+  <data name="BuildNotification" xml:space="preserve">
+    <value>Build notifications from Go has yet to be implemented.</value>
+  </data>
+  <data name="CanNotCreateWindow" xml:space="preserve">
+    <value>Can not create tool window.</value>
+  </data>
+  <data name="CannotInterpretResponse" xml:space="preserve">
+    <value>Check to see that you are not using HTTPS on an HTTP connection or vise versa.</value>
+  </data>
+  <data name="CardsAllCommandCallback" xml:space="preserve">
+    <value>All Cards Command Callback.</value>
+  </data>
+  <data name="CardSetIsEmpty" xml:space="preserve">
+    <value>No cards satisfied the search criteria.</value>
+  </data>
+  <data name="CardSetWindowTitle" xml:space="preserve">
+    <value>Cards (%%project%%)</value>
+  </data>
+  <data name="CardSetWindowTitleStories" xml:space="preserve">
+    <value>List of Stories (%%project%%)</value>
+  </data>
+  <data name="CardsThisUserCommandCallback" xml:space="preserve">
+    <value>Cards for This User Command Callback.</value>
+  </data>
+  <data name="Colon" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="ExplorerCommandCallback" xml:space="preserve">
+    <value>Explorer Command Callback.</value>
+  </data>
+  <data name="ExplorerViewCaption" xml:space="preserve">
+    <value>ThoughtWorks Explorer</value>
+  </data>
+  <data name="HostnameIsEmpty" xml:space="preserve">
+    <value>Host name cannot be empty.\n</value>
+  </data>
+  <data name="InvalidProtocol" xml:space="preserve">
+    <value>The host name is malformed. The protocol must be either HTTP or HTTPS.\n</value>
+  </data>
+  <data name="IvsOutputWindowAccessFail" xml:space="preserve">
+    <value>Failed to get a reference to IVsOutputWindow</value>
+  </data>
+  <data name="MalformedHostnameVarious" xml:space="preserve">
+    <value>Host name is malformed and must be like https://domain[:port] or http://domain[:port]\n</value>
+  </data>
+  <data name="MingleApiSegment" xml:space="preserve">
+    <value>/api/v2</value>
+  </data>
+  <data name="MingleCardSegment" xml:space="preserve">
+    <value>/cards/&amp;&amp;card-no&amp;&amp;</value>
+  </data>
+  <data name="MingleCardSetSegment" xml:space="preserve">
+    <value>/cards.xml</value>
+  </data>
+  <data name="MingleNotRunning" xml:space="preserve">
+    <value>Mingle or Go do not appear to be running. Try browsing to Mingle from a browser, then try this query again. This may also be caused by an errorneous URL for the Host or invalid credentials.</value>
+    <comment>Produced by MingleCardTypeSet.cs</comment>
+  </data>
+  <data name="MingleProjectsSegment" xml:space="preserve">
+    <value>/projects</value>
+  </data>
+  <data name="MingleTransitionSetSegment" xml:space="preserve">
+    <value>/cards/&amp;&amp;card-no&amp;&amp;/transitions.xml</value>
+  </data>
+  <data name="MissingOrInvalidSetting" xml:space="preserve">
+    <value>A setting is missing or invalid.</value>
+  </data>
+  <data name="OutputWindowAccessFail" xml:space="preserve">
+    <value>Failed to get a reference to the Output window General pane</value>
+  </data>
+  <data name="OutputWindowWriteFail" xml:space="preserve">
+    <value>Failed to write on the Output window</value>
+  </data>
+  <data name="PackageIsNull" xml:space="preserve">
+    <value>Package property is null.</value>
+  </data>
+  <data name="PleaseSelectRowFirst" xml:space="preserve">
+    <value>Please select (click on) a row in the list.</value>
+  </data>
+  <data name="ProductDetails" xml:space="preserve">
+    <value>Extends Visual Studio to allow context-relevant connection to Mingle and GO.</value>
+  </data>
+  <data name="ProductId" xml:space="preserve">
+    <value>MG-VSIX</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="TransitionIsNull" xml:space="preserve">
+    <value>Please select a transition.</value>
+  </data>
+  <data name="TwSettingsCommandCallback" xml:space="preserve">
+    <value>Mingle/Go Settings Command Callback.</value>
+  </data>
+  <data name="UrlPropertyIsNullOrEmpty" xml:space="preserve">
+    <value>The Url property is null or empty.</value>
+  </data>
+  <data name="GoPipelinePropertiesCaption" xml:space="preserve">
+    <value>Build Results</value>
+  </data>
+  <data name="PipelineSearchError" xml:space="preserve">
+    <value>There was a problem querying pipeline properties.</value>
+  </data>
+  <data name="CannotBeNullOrEmpty" xml:space="preserve">
+    <value>Cannot be null or empty</value>
+    <comment>Produced by GoFeed.cs</comment>
+  </data>
+  <data name="PropertyOutOfRange" xml:space="preserve">
+    <value>The value of the property is out of range, null or empty. A valid value is required.</value>
+    <comment>Produced by GoFeed.cs</comment>
+  </data>
+  <data name="MingleCardUpdateError" xml:space="preserve">
+    <value>Update attempt for this card has failed. The response received from the Mingle server is: [httpstatus]</value>
+  </data>
+  <data name="CardWindowCaption" xml:space="preserve">
+    <value>Card {0} - {1}</value>
+  </data>
+  <data name="CardCreatedByLogin" xml:space="preserve">
+    <value>Created By</value>
+  </data>
+  <data name="CardCreatedByName" xml:space="preserve">
+    <value>Created By</value>
+  </data>
+  <data name="CardCreatedOn" xml:space="preserve">
+    <value>Created On</value>
+  </data>
+  <data name="CardDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="CardId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="CardModifiedByLogin" xml:space="preserve">
+    <value>Modified By</value>
+  </data>
+  <data name="CardModifiedByName" xml:space="preserve">
+    <value>Modified By</value>
+  </data>
+  <data name="CardModifiedOn" xml:space="preserve">
+    <value>Modified On</value>
+  </data>
+  <data name="CardName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CardNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="CardProjectId" xml:space="preserve">
+    <value>Project Id</value>
+  </data>
+  <data name="CardProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="CardVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="CardModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+  </data>
+  <data name="CardRank" xml:space="preserve">
+    <value>Rank</value>
+  </data>
+  <data name="ClickToEdit" xml:space="preserve">
+    <value>Click on the field to edit its value</value>
+  </data>
+  <data name="TheTypeMustBeSerializable" xml:space="preserve">
+    <value>The type must be serializable.</value>
+  </data>
+  <data name="PropertyValueCurrentIteration" xml:space="preserve">
+    <value>(Current Iteration)</value>
+  </data>
+  <data name="PropertyValueNotSet" xml:space="preserve">
+    <value>(not set)</value>
+    <comment>Produced by MingleProject.cs</comment>
+  </data>
+  <data name="PropertyValueSelectCard" xml:space="preserve">
+    <value>select card...</value>
+    <comment>Produced by MingleProject.cs</comment>
+  </data>
+  <data name="ClickToMakeTransition" xml:space="preserve">
+    <value>Click to make this transition</value>
+  </data>
+  <data name="MissingOrInvalidCredentialData" xml:space="preserve">
+    <value>One or more of the user, password, host or project settings required for Mingle interaction appear to be missing or invalid. Would you like to edit them now?</value>
+  </data>
+  <data name="OtherConnectionError" xml:space="preserve">
+    <value>There was a problem connecting to the Mingle or Go. Some of the ThoughtWorks Exploer tree may not have been loaded. Please check your settings for a misspelled project name or similar issue.</value>
+  </data>
+  <data name="TransitionAdmonitionLabel" xml:space="preserve">
+    <value>Please enter a comment in the box below and close this form.</value>
+  </data>
+  <data name="TransitionCannotBeApplied" xml:space="preserve">
+    <value>The transition could not be applied.</value>
+  </data>
+  <data name="TransitionCommentRequired" xml:space="preserve">
+    <value>You must provide a comment for this transition. Do you wish to supply a comment?</value>
+  </data>
+  <data name="TransitionEquals" xml:space="preserve">
+    <value>Transition = </value>
+  </data>
+  <data name="TransitionWindowTitle" xml:space="preserve">
+    <value>Transition Comment</value>
+  </data>
+  <data name="CardNotFound" xml:space="preserve">
+    <value>The card could not be found:</value>
+  </data>
+  <data name="FeedbackDataUnsubmittedWarning" xml:space="preserve">
+    <value>The window is closing and may include data that has not been submitted. Do you wish to proceed? Click No to return to the form.</value>
+  </data>
+  <data name="CancelLabel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="FeedbackEmailSubject" xml:space="preserve">
+    <value>Feedback: Visual Studio Connector</value>
+  </data>
+  <data name="FeedbackFormCompanyLabel" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="FeedbackFormDescriptionLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="FeedbackFormEmailLabel" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="FeedbackFormTitle" xml:space="preserve">
+    <value>ThoughtWorks Visual Studio Connector Feedback</value>
+  </data>
+  <data name="FeedbackFormTitleLabel" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="SubmitLabel" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="FeedbackDescriptionToolTip" xml:space="preserve">
+    <value>The first fifty characters becomes the subject of this item in email.</value>
+  </data>
+  <data name="FeedbackTypeDefect" xml:space="preserve">
+    <value>Defect</value>
+  </data>
+  <data name="FeedbackTypeFeature" xml:space="preserve">
+    <value>Feature Resuest</value>
+  </data>
+  <data name="PropertyCouldNotBeUpdated" xml:space="preserve">
+    <value>A property or field could not be updated.</value>
+  </data>
+  <data name="NewCardDefaultName" xml:space="preserve">
+    <value>New card</value>
+    <comment>Produced by MingleCard.cs</comment>
+  </data>
+  <data name="ViewNotUsableFromVisualStudio" xml:space="preserve">
+    <value>This view is not available in Visual Studio.</value>
+  </data>
+  <data name="CheckYourSettings" xml:space="preserve">
+    <value>Check your settings</value>
+  </data>
+  <data name="MessageMurmurCommitted" xml:space="preserve">
+    <value>Murmur Accepted</value>
+  </data>
+  <data name="SettingsDataIsDirty" xml:space="preserve">
+    <value>You have made settings changes that have not been saved. Would you like to save them, now?</value>
+  </data>
+  <data name="MingleCardTypesLoadingError" xml:space="preserve">
+    <value>There was a problem loading Mingle Card Types.</value>
+  </data>
+  <data name="MingleFavoritesLoadingError" xml:space="preserve">
+    <value>There was a problem loading Mingle Favorites.</value>
+  </data>
+  <data name="MinglePropertiesLoadingError" xml:space="preserve">
+    <value>There was a problem loading Mingle Properties.</value>
+  </data>
+  <data name="MingleTeamMembersLoadingError" xml:space="preserve">
+    <value>There was a problem loading Mingle Team members.</value>
+  </data>
+  <data name="MingleTransitionsLoadingError" xml:space="preserve">
+    <value>There was a problem loading Mingle Transitions.</value>
+  </data>
+  <data name="MingleCardNameNullOrEmpty" xml:space="preserve">
+    <value>The "Name" field may not be blank or empty.</value>
+  </data>
+  <data name="MustBeMingleUrlSegment" xml:space="preserve">
+    <value>The URL paramater must be in the form "/api/v2/[project]/... . Host name will be added by MingleServer.</value>
+  </data>
+  <data name="ProjectIsRequired" xml:space="preserve">
+    <value>The ProjectId is null or empty. It is required.</value>
+  </data>
+  <data name="MissingMingleConnectionInformation" xml:space="preserve">
+    <value>The host url, login name and password are all required for connecting to Mingle. One of them is empty or null.</value>
+  </data>
+</root>

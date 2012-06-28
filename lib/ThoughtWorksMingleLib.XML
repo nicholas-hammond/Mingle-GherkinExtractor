@@ -1,0 +1,1927 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ThoughtWorksMingleLib</name>
+    </assembly>
+    <members>
+        <member name="T:ThoughtWorksMingleLib.MingleResult">
+            <summary>
+            Result from an XElement payload
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleResult.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new MingleResult
+            </summary>
+            <param name="xElement"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleResult.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)">
+            <summary>
+            Attempt to get a member
+            </summary>
+            <param name="binder"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.IMingleXmlObjectCollection">
+            <summary>
+            Interface for dealing with Mingle objects
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleXmlObjectCollection.Parse">
+            <summary>
+            Gets a Mingle object and loads a Mingle collection
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.IMingleXmlObjectCollection.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.XElementWrapper">
+            <summary>
+            This is an abstract class inherited by all classes of MingleEvents
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleNotRunningException">
+            <summary>
+            Thrown when the Mingle Server is apparently not running
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleNotRunningException.#ctor">
+            <summary>
+            Exception thrown when Mingle is not running
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleNotRunningException.#ctor(System.String)">
+            <summary>
+            Exception thrown when Mingle is not running
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleNotRunningException.#ctor(System.String,System.Exception)">
+            <summary>
+            Exception thrown when Mingle is not running
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="inner">Inner exception that caused this exception</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleNotRunningException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Mingle not running exception serialization API
+            </summary>
+            <param name="serializationInfo"></param>
+            <param name="streamingContext"></param>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsFeedEntry">
+            <summary>
+            Models the "entry" tag
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsFeedEntry.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventsFeedEntry
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsFeedEntry.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new MingleEventsFeedEntry
+            </summary>
+            <param name="xml">XML in XElement form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsFeedEntry.GetCardUrlPathForApi">
+            <summary>
+            Returns the url of the latest version of the card
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.Id">
+            <summary>
+            The "id" tag
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.Title">
+            <summary>
+            The "title" tag
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.Updated">
+            <summary>
+            The "updated" tag
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.AuthorName">
+            <summary>
+            The Name tag withing Author
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.AuthorUri">
+            <summary>
+            The URI tag within Author
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.Links">
+            <summary>
+            A list of "link" tags
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.Categories">
+            <summary>
+            A list of "category" tags
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.Content">
+            <summary>
+            The "content" tag
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeedEntry.CardNumber">
+            <summary>
+            Returns the card number
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsFeed">
+            <summary>
+            Models the "feed" tag
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsFeed.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventsFeed
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsFeed.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Contrstucts a new MingleEventsFeed
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeed.Title">
+            <summary>
+            The "title" tag
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeed.Id">
+            <summary>
+            The "id" tag
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeed.Links">
+            <summary>
+            List of "link" tags
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeed.Updated">
+            <summary>
+            The "updated" tag
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsFeed.Entries">
+            <summary>
+            List of "entry" tags
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleCardType">
+            <summary>
+            Describes a Card Type
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardType.#ctor(System.String)">
+            <summary>
+            Constructs a MingleCardType from card_type XML
+            </summary>
+            <param name="cardType">XML for a card_type</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardType.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a MingleCardType from card_type XML
+            </summary>
+            <param name="cardType">XML for a card_type</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardType.RawData">
+            <summary>
+            Returns an XElement backing this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardType.Id">
+            <summary>
+            Card Id
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardType.Name">
+            <summary>
+            Card name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardType.Color">
+            <summary>
+            Color (consult Mingle documentation)
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardType.Position">
+            <summary>
+             Position (consult Mingle documentation)
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardType.PropertyDefinitions">
+            <summary>
+            Returns the list of property_definition names associated with this card type
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleCardProperty">
+            <summary>
+            Represents a property of a Mingle card
+            </summary>
+            <remarks>
+            Each Mingle card has a fixed set of members also known as attributes.
+            A card also has a variable colleciton of properties as determined
+            by the card type. MingleCardProperty model each or these properties.
+            </remarks>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardProperty.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleCardProperty
+            </summary>
+            <param name="xml">Xml for the property</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardProperty.#ctor(System.String,ThoughtWorksMingleLib.IMingleProject)">
+            <summary>
+            Constructs a new MingleCardProperty
+            </summary>
+            <param name="xml">Xml for the property</param>
+            <param name="project">MingleProject associated with this property</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardProperty.RawData">
+            <summary>
+            XElement backing this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardProperty.Name">
+            <summary>
+            Name of the property
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardProperty.Value">
+            <summary>
+            Property value
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardProperty.IsValueNil">
+            <summary>
+            True if the 'nil' attribute exists
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardProperty.ValueUrl">
+            <summary>
+            If the Value is a card then this returns the Url of the card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardProperty.PropertyDefinition">
+            <summary>
+            returns the associated MinglePropertyDefinition of this property
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleUnauthorizedException.#ctor">
+            <summary>
+            Constructs a new MingleUnauthorizedException
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleUnauthorizedException.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleUnauthorizedException
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleUnauthorizedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs a new MingleUnauthorizedException
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="inner">Inner exception that caused this exception</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleUnauthorizedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new MingleUnauthorizedException
+            </summary>
+            <param name="serializationInfo"></param>
+            <param name="streamingContext"></param>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MinglePropertyValue">
+            <summary>
+            Class to model a Mingle property value
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MinglePropertyValue.Parse(System.Xml.XmlElement)">
+            <summary>
+            Parse the property value
+            </summary>
+            <param name="n">XmlElement object for the property value obtained from the Mingle API</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyValue.Id">
+            <summary>
+            Property ID
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyValue.Value">
+            <summary>
+            Property value
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyValue.Color">
+            <summary>
+            Property color vlaue (consult Mingle documentation)
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyValue.Position">
+            <summary>
+            Property position (consult Mingle documentation)
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleFilter">
+            <summary>
+            Filter is a class that exposes properties and methods to provide filter and query
+            clauses suitable for POST data and queries. 
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFilter.#ctor">
+            <summary>
+            Constructs a new Filter. Sets Name, Condition and Value to the empty string.
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFilter.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs a new Filter. Sets Name, Condition and Value.
+            </summary>
+            <param name="name"></param>
+            <param name="condition"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.Name">
+            <summary>
+            Name of the Card property or attribute
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.Condition">
+            <summary>
+            The boolean condition to use
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.Value">
+            <summary>
+            The value of the property or attribute
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.FilterFormatString">
+            <summary>
+            Returns "filters" clauses used in GET request queries
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.FavoriteString">
+            <summary>
+            Returns a string with the formatted favorite name/value pair
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.CardDataString">
+            <summary>
+            Returns data value paramater clauses used in PUT/POST requests for cards
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.CardPropertyNameString">
+            <summary>
+            Returns Property Name paramater clauses used in PUT/POST requests for cards
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.CardPropertyValueString">
+            <summary>
+            Returns Property Value paramater clauses used in PUT/POST requests for cards
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.TransitionFormatString">
+            <summary>
+            Returns transition_execution clauses for POST data 
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFilter.MqlString">
+            <summary>
+            Returns an MQL expression
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsLink">
+            <summary>
+            Models a "link" element of an event "entry" tag
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsLink.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a MingleEventsLink
+            </summary>
+            <param name="xml">XML in XElement form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsLink.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventsLink
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsLink.Href">
+            <summary>
+            Link's "href" attribute
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsLink.Rel">
+            <summary>
+            Link's "rel" attribute
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsLink.Type">
+            <summary>
+            Link's "type" attribute
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsLink.Title">
+            <summary>
+            Link's "title" attribute
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsEntryContent">
+            <summary>
+            Models the "content" tag of an "entry"
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsEntryContent.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new MingleEventsEntryContent
+            </summary>
+            <param name="xml">XML in XElement form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsEntryContent.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventsEntryContent
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsEntryContent.Changes">
+            <summary>
+            List of "change" tags within the "content"
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleTransition">
+            <summary>
+            A Mingle Transition
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleTransition.#ctor(System.String,ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a new Transition
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleTransition.Update(System.Int32)">
+            <summary>
+            Performs the POST operation to Mingle
+            </summary>
+            <remarks>
+            This method POSTs the Transition on the Card indicated by cardNumber.
+            </remarks>
+            <param name="cardNumber"></param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.Project">
+            <summary>
+            MingleProject associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.RawData">
+            <summary>
+            Returns an XElement backing this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.Name">
+            <summary>
+             One line short name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.Id">
+            <summary>
+            Card ID, Transition ID, atc.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.Url">
+            <summary>
+            transition_execution_url
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.RequireComment">
+            <summary>
+            require_comment
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.RequiredUserInput">
+            <summary>
+            user_input_required
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.OptionalUserInput">
+            <summary>
+            user_input_optional
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.IfCardHasProperties">
+            <summary>
+            if_card_has_properties
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.WillSetCardProperties">
+            <summary>
+            will_set_card_properties
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.CardTypeName">
+            <summary>
+            card_type.name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransition.CardTypeUrl">
+            <summary>
+            card_type.url
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleServer">
+            <summary>
+            A class for interacting with the Mingle server
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.IMingleServer">
+            <summary>
+            MingleServer interface
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleServer.Get(System.String,System.String)">
+            <summary>
+            Performs a GET operation on the Mingle API
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleServer.Get(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a GET operation on the Mingle API with a query string
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <param name="paramaters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleServer.Put(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a PUT operation on the Mingle API with associated POST data
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleServer.Post(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a POST operation on the Mingle API with associated POST data
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleServer.GetProjectList">
+            <summary>
+            Returns a Sorted list of project names and identifiers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleServer.GetProject(System.String)">
+            <summary>
+            Returns a MingleProject
+            </summary>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.#ctor(System.String,System.String,System.Security.SecureString)">
+            <summary>
+            Constructs a new MingleServer
+            </summary>
+            <param name="hostUrl">Host url</param>
+            <param name="loginName">Login name of the user</param>
+            <param name="password">password</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs a new MingleServer
+            </summary>
+            <param name="hostUrl">Host url</param>
+            <param name="loginName">Login name of the user</param>
+            <param name="password">password</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.Get(System.String,System.String)">
+            <summary>
+            Performs a GET on the url with optional query paramaters and returns HttpWebResponse
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.Get(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a GET on the url with optional query paramaters and returns HttpWebResponse
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.Put(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a PUT on the Mingle url with optional post data and returns IResponse
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns>URL of the card from the Location header</returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.Post(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Performs a POST on the Mingle url with optional post data and returns HttpWebResponse
+            </summary>
+            <param name="project"></param>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns>URL of the card from the Location header</returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.EnablePreAuthentication(System.Uri,System.String)">
+            <summary>
+            Enables pre-wuthentication on web requests. Improves performance.
+            </summary>
+            <remarks>See MSDN Library documentation for AuthenticaionManager: http://msdn.microsoft.com/en-us/library/3dx32b0y.aspx </remarks>
+            <param name="uri"></param>
+            <param name="authenticationType"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.AcceptAllCertifications(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            Allows all certificates to be considered acceptable.
+            </summary>
+            <param name="sender"></param>
+            <param name="certification"></param>
+            <param name="chain"></param>
+            <param name="sslPolicyErrors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.GetProject(System.String)">
+            <summary>
+            Returns the MingleProject for the project Id on this MingleServer (instance)
+            </summary>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.GetProjectList">
+            <summary>
+            Returns a Sorted list of project names and identifiers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.GetResponse(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Returns the body of a web response from Mingle
+            </summary>
+            <param name="method"></param>
+            <param name="project"></param>
+            <param name="urlSegment"></param>
+            <param name="data"></param>
+            <returns></returns>
+            <exception cref="T:ThoughtWorksMingleLib.MingleWebException">Thrown when .NET returns a WebException. 
+            Packages the WebException as the InnerException and the contents of the error 
+            in the response body as the exception message.
+            </exception>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.FullyQualifiedMingleUrl(System.String,System.String)">
+            <summary>
+            Adds "/api/v2" to the front of a URL segment
+            </summary>
+            <param name="project">Mingle project id (not name)</param>
+            <param name="urlSegment">URL segment string</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.NormalizeUrlSegment(System.String)">
+            <summary>
+            Ensures a URL segment, passed as a string, begins and does not end with "/"
+            </summary>
+            <param name="url">The url string to normalize</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.GetSecureStringFromString(System.String)">
+            <summary>
+            Converts a String into a read-only SecureString
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleServer.GetStringFromSecureString(System.Security.SecureString)">
+            <summary>
+            Converts a SecureString to String
+            </summary>
+            <param name="secureString"></param>
+            <returns>The password as a string or if the conversion fails then an empty string is returned.</returns>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleWebException">
+            <summary>
+            A wrapper for WebException
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleWebException.#ctor">
+            <summary>
+            Constructs a new MingleWebException
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleWebException.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleWebException
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleWebException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs a new MingleWebException
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleCard">
+            <summary>
+            A Mingle Card
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCard.#ctor">
+            <summary>
+            Constructs a Mingle Card object
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCard.#ctor(System.String,ThoughtWorksMingleLib.IMingleProject)">
+            <summary>
+            Constructs a Mingle Card object
+            </summary>
+            <param name="card">XML for a card</param>
+            <param name="project">Mingle project</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCard.AddCardAttributeFilterToPostData(System.String,System.String)">
+            <summary>
+            Adds a field to the PostData for subsequent use in POST operations.
+            </summary>
+            <param name="name">Name of the field in the card</param>
+            <param name="value">Value of the data</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCard.AddPropertyFilterToPostData(System.String,System.String)">
+            <summary>
+            Adds a property to the PostData for subsequent use in POST operations.
+            </summary>
+            <param name="name">Name of the property in the card</param>
+            <param name="value">Value of the property</param>
+            <remarks>
+            Property data is actually a pair of list elements. One for the name and one for the value.
+            </remarks>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCard.Update">
+            <summary>
+            Updates the persisted instance of this Card with properties associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Name">
+            <summary>
+             One line short name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Id">
+            <summary>
+            Card ID, Transition ID, atc.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Url">
+            <summary>
+            Url string to use for next CRUD operation
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Description">
+            <summary>
+            Card description
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Type">
+            <summary>
+            Card type (see Mingle schema)
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.CardTypeUrl">
+            <summary>
+            Url for the card type
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Number">
+            <summary>
+            Card Number
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ProjectName">
+            <summary>
+            Project name, e.g. Blue Diamond
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ProjectId">
+            <summary>
+            Project Identifier as used in HTML, e.g. blue_diamond
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ProjectUrl">
+            <summary>
+            URL (URI) used to retrieve the project from Mingle
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Version">
+            <summary>
+            Mingle card version
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ProjectCardRank">
+            <summary>
+             Card rank
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.CreatedOn">
+            <summary>
+            Date the card was created
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ModifiedOn">
+            <summary>
+            Date the card was last changed
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ModifiedByLogin">
+            <summary>
+            The last user login to change the card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ModifiedByUrl">
+            <summary>
+            Url for the user that modified the card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.CreatedByLogin">
+            <summary>
+            The user login that created the card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.CreatedByUrl">
+            <summary>
+            Url for the user that created the card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.ModifiedByName">
+            <summary>
+            The name of the user who last modified the card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.CreatedByName">
+            <summary>
+            The name of the user who created the card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.RenderedDescription">
+            <summary>
+            The rendered description to be handed to a web browser
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.RawData">
+            <summary>
+            Returns an XElement backing this object.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.CardProperties">
+            <summary>
+            A list of card properties
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.Transitions">
+            <summary>
+            A list of transitions for this card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCard.PostData">
+            <summary>
+            List of fields changing on Update
+            </summary>
+            <remarks>
+            It is recommended you use AddField() and AddProperty(), which properly
+            format data in this list.
+            </remarks>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MinglePropertyDefinitionCollection">
+            <summary>
+            MinglePropertySet is a collection of Property Definitions for a Project.
+            A hashtable is used because the most frequent use of this data is in the
+            CardView where we need to do direct access of properties lidted in cards.
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MinglePropertyDefinitionCollection.#ctor(ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a new MinglePropertyDefinitionCollection
+            </summary>
+            <param name="project">Mingle project object</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MinglePropertyDefinitionCollection.Parse">
+            <summary>
+            Get Property Definitions
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinitionCollection.Project">
+            <summary>
+            MingleProject associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinitionCollection.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleCardCollection">
+            <summary>
+             Set of Mingle cards
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardCollection.#ctor(ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a new MingleCardCollection
+            </summary>
+            <param name="project"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardCollection.Parse(System.Int32)">
+            <summary>
+            Fetch a single card
+            </summary>
+            <param name="cardNumber">Card Number (not the Card Id)</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardCollection.Parse">
+            <summary>
+            Populates a Card Set using the user, project and host in settings
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardCollection.Parse(System.Collections.ObjectModel.Collection{System.String})">
+            <summary>
+            Populate the CardSet from the url
+            </summary>
+            <param name="filters">Filters to apply to this request</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardCollection.Project">
+            <summary>
+            MingleProject associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardCollection.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.IMingleProject">
+            <summary>
+            Interface for MingleProject supporting project-contextual methods
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetCards(System.Collections.ObjectModel.Collection{System.String})">
+            <summary>
+            Return cards from Mingle
+            </summary>
+            <param name="filters">Filters to be applied to the query</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetCardTypes">
+            <summary>
+            Gets the card types for this project
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetTransitions">
+            <summary>
+            Gets the transitions for this project
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetTeam">
+            <summary>
+            Gets the team members for this project
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetProperties">
+            <summary>
+            Gets the property definitions for this project
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetFavorites">
+            <summary>
+            Gets the favorites for this project
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetCardValuedProperties(System.Boolean)">
+            <summary>
+            Get the list of property definitions for properties that are not restricted to transition-only
+            </summary>
+            <param name="transitionOnly"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetCardType(System.String)">
+            <summary>
+            Geven a card number get the card type
+            </summary>
+            <param name="cardNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetCardsOfType(System.String)">
+            <summary>
+            Returns card of the type indicated by cardType
+            </summary>
+            <param name="cardType">Card_type of cards to be returned</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.ExecMql(System.String)">
+            <summary>
+            Execute an MQL request and return results in a MingleCardCollection
+            </summary>
+            <param name="mql">MQL query string</param>
+            <returns>MingleCardCollection</returns>
+            <exception cref="T:System.Exception">May throw an exception bubbling up from below</exception>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetView(System.String)">
+            <summary>
+            Returns a MingleCardCollection for a view 
+            </summary>
+            <param name="name">Name of the view (favorite)</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.RunMacro(System.String)">
+            <summary>
+            Given a macro, return the renderable HTML
+            </summary>
+            <param name="macro">Macro text</param>
+            <returns>HTML</returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.CreateCard(System.String,System.String)">
+            <summary>
+            Creates a new card
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.ResultsCount(System.Xml.Linq.XElement)">
+            <summary>
+            For testing. Given XElement with results from ExecMql, counts the results.
+            </summary>
+            <param name="results"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetCard(System.Int32)">
+            <summary>
+            Returns card given a card number
+            </summary>
+            <param name="cardNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.GetMurmurs">
+            <summary>
+            Returns murmurs from Mingle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleProject.SendMurmur(System.String)">
+            <summary>
+            Sends a murmur to Mingle
+            </summary>
+            <param name="murmur"></param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.IMingleProject.ProjectId">
+            <summary>
+            The project identifier
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.IMingleProject.Properties">
+            <summary>
+            Property definitions for this project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.IMingleProject.Transitions">
+            <summary>
+            Transition collection for this project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.IMingleProject.Mingle">
+            <summary>
+            Mingle server interface for this project
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleFavorite">
+            <summary>
+            Class to model a Mingle "favorite" (also known as a "View")
+            </summary>
+            <remarks>
+            A MingleFavorite object has the proeprties of a View in Mingle.
+            It is also a collection of cards references by the View.
+            </remarks>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFavorite.#ctor(System.String,ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a new MingleFavorite from XML
+            </summary>
+            <param name="favorite">Favorite XML</param>
+            <param name="project"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFavorite.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new Favorite
+            </summary>
+            <param name="favorite"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFavorite.GetCards">
+            <summary>
+            Refreshes the list of cards indicated by this Favorite
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.RawData">
+            <summary>
+            Returns an XElement with the XML for this Mingle view
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.Project">
+            <summary>
+            The MingleProject associated with this MingleFavorite
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.Id">
+            <summary>
+            Favorite Id
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.Name">
+            <summary>
+            Favorite Name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.ProjectName">
+            <summary>
+             Favorite Project Name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.ProjectId">
+            <summary>
+             Favorite Project Id
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.FavoritedType">
+            <summary>
+             Favorite Type
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavorite.TabView">
+            <summary>
+            Favorite Tab View
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsPropertyDefinition">
+            <summary>
+            Models the property_definition tag
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsPropertyDefinition.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new MingleEventsPropertyDefinition
+            </summary>
+            <param name="xml">XML in XElement form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsPropertyDefinition.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventsPropertyDefinition
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsPropertyDefinition.Url">
+            <summary>
+            Url attribute
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsPropertyDefinition.Name">
+            <summary>
+            Name element
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsPropertyDefinition.DataType">
+            <summary>
+             data_type element
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsPropertyDefinition.IsNumeric">
+            <summary>
+            is_numeric element
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsPropertyDefinition.Position">
+            <summary>
+            is_numeric element
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleFavoriteCollection">
+            <summary>
+             A class to handle a collection of MingleFavorite
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFavoriteCollection.#ctor(ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a new MingleFavoriteCollection
+            </summary>
+            <param name="project">MingleProject object</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFavoriteCollection.Parse">
+            <summary>
+            Refreshes the list of Favorites
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleFavoriteCollection.Parse(System.String)">
+            <summary>
+            Parses the results of Mingle's favorites.xml resource and populates the collection
+            </summary>
+            <param name="xml">Results of calling Mingle's API for the favorites.xml resource</param>
+            <returns></returns>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavoriteCollection.Project">
+            <summary>
+            MingleProject associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleFavoriteCollection.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsCategory">
+            <summary>
+            Models a "category" element of an event "entry" tag
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsCategory.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a MingleEventsCategory
+            </summary>
+            <param name="xml">XML in XElement form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsCategory.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventsCategory
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsCategory.Term">
+            <summary>
+            Category's "term" attribute
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsCategory.Scheme">
+            <summary>
+            Category's "scheme" attribute
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleCardPropertyCollection">
+            <summary>
+            Represents a collection of properties of a Mingle card
+            </summary>
+            <remarks>
+            Each Mingle card has a fixed set of members also known as attributes.
+            A card also has a variable colleciton of properties as determined
+            by the card type. MingleCardProperty model the colleciton of properties.
+            </remarks>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardPropertyCollection.#ctor(ThoughtWorksMingleLib.IMingleProject)">
+            <summary>
+            Constructs a new MingleCardPropertyCollection
+            </summary>
+            <param name="project">MingleProject object</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardPropertyCollection.Parse(System.Xml.Linq.XElement)">
+            <summary>
+            Parses the xml of all the card properties into a collection of MingleCardProperty
+            </summary>
+            <param name="properties"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardPropertyCollection.ProjectId">
+            <summary>
+            ID (not name) of the project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardPropertyCollection.Project">
+            <summary>
+            MingleProject object
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.IMingleXmlObject">
+            <summary>
+            Interface for Mingle XML objects (e.g., Card, Card Type)
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.IMingleXmlObject.Update">
+            <summary>
+            Saves this object to Mingle
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleTransitionCollection">
+            <summary>
+            Set of Card Transitions
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleTransitionCollection.#ctor(ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a new MingleTransitionCollection
+            </summary>
+            <param name="project">MingleProject object</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleTransitionCollection.Parse">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleTransitionCollection.Parse(System.Int32)">
+            <summary>
+            Gets all transitions for a project
+            </summary>
+            <param name="cardNumber">Card number. If less than or equal to zero then all transitions for the project are fetched.</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleTransitionCollection.Parse(System.String)">
+            <summary>
+            Gets the transitions for the url
+            </summary>
+            <param name="url">A Mingle url segment of the form /api/v2/projects/...</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransitionCollection.Project">
+            <summary>
+            MingleProject associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransitionCollection.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleTransitionCollection.CardNumber">
+            <summary>
+            Card number associated with this TransitionSet
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsElementNillableValue">
+            <summary>
+            Models a tag potentially carrying a data value payload.
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsElementNillableValue.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new MingleEventsElementsNillableValue
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsElementNillableValue.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventselementNillableValue
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsElementNillableValue.Value">
+            <summary>
+            Returns the value or null
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleCardTypeCollection">
+            <summary>
+            Collection of Card Types listing the various types of cards available in the project.
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardTypeCollection.#ctor(ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a new MingleCardTypeCollection
+            </summary>
+            <param name="project">MingleProject object</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleCardTypeCollection.Parse">
+            <summary>
+            Populates a MingleCardType set with a bunch of MingleCardType objects using the Mingle "get card types" API
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardTypeCollection.Project">
+            <summary>
+            MingleProject associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleCardTypeCollection.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleEventsChange">
+            <summary>
+            Models the "change" tag
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsChange.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new MingleEventsChange
+            </summary>
+            <param name="xml">XML in XElement form</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleEventsChange.#ctor(System.String)">
+            <summary>
+            Constructs a new MingleEventsChange
+            </summary>
+            <param name="xml">XML in string form</param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsChange.Type">
+            <summary>
+            The Type
+            </summary>
+            <remarks>
+            Example: name-change, description-change, property-change
+            </remarks>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsChange.TypeFieldName">
+            <summary>
+            The Field Name
+            </summary>
+            <remarks>
+            Example: If the Type is "name-change" this property returns "name"
+            </remarks>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsChange.TypeAction">
+            <summary>
+            The Action
+            </summary>
+            <remarks>
+            Example: If the Type is "name-change" this property returns "change"
+            </remarks>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsChange.OldValue">
+            <summary>
+            The old_value
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsChange.NewValue">
+            <summary>
+            The new_value
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleEventsChange.PropertyDefinition">
+            <summary>
+            property_definition object
+            </summary>
+            <remarks>
+            If the change type is "property_definition" this property returns a 
+            MingleEventsPropertyDefinition object otherwise it returns null.
+            </remarks>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleProject">
+            <summary>
+            MingleProject class has properties for collections that are part of projects
+            </summary>
+            <remarks>
+            Projects have a number of projects that all comprise context. The MingleProject class includes
+            properties for singletons and collections of things like Iterations and CardTypes. These collections
+            are bound with data using a lazy binding approach. This ensures that creating a MingleProject object
+            is a lightweight event. Collections are populated with data on first use.
+            </remarks>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.ResultsCount(System.Xml.Linq.XElement)">
+            <summary>
+            Count of the result tags returned from a MQL query
+            </summary>
+            <param name="results"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.#ctor(System.String,ThoughtWorksMingleLib.IMingleServer)">
+            <summary>
+            Constructs a new MingleProject
+            </summary>
+            <param name="projectId">An existing Mingle project_id</param>
+            <param name="mingle">Mingle server</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.ClearCardSetPropertyValues">
+            <summary>
+             Clears card set property values from the cache
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetCardTypes">
+            <summary>
+            Get the CartTypes property results set
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetTransitions">
+            <summary>
+            Get the Transitions property from the Mingle server
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetTeam">
+            <summary>
+            Get list of team members for the project
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetProperties">
+            <summary>
+            Get property definitions for the project
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetFavorites">
+            <summary>
+            Get favorites
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetCardValuedProperties(System.Boolean)">
+            <summary>
+            Get the list of property definitions for properties that are not restricted to transition-only
+            </summary>
+            <param name="transitionOnly"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetCardType(System.String)">
+            <summary>
+            Returns the card_type value
+            </summary>
+            <param name="cardNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetCardsOfType(System.String)">
+            <summary>
+            Returns card of the type indicated by cardType
+            </summary>
+            <param name="cardType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetCards">
+            <summary>
+            Returns all the cards
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetCards(System.Collections.ObjectModel.Collection{System.String})">
+            <summary>
+            Given filter criteria, return a collection of cards
+            </summary>
+            <param name="filters">MingleFilter describing selection criteria</param>
+            <returns>MingleCardCollection object</returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.ExecMql(System.String)">
+            <summary>
+            Execute an MQL request and return results in a MingleCardCollection
+            </summary>
+            <param name="mql">MQL query string</param>
+            <returns>MingleCardCollection</returns>
+            <exception cref="T:System.Exception">May throw an exception bubbling up from below</exception>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetView(System.String)">
+            <summary>
+            Returns a MingleCardCollection for a view 
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.RunMacro(System.String)">
+            <summary>
+            Given a macro, return the renderable HTML
+            </summary>
+            <param name="macro">Macro text</param>
+            <returns>HTML</returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetCard(System.Int32)">
+            <summary>
+            Returns a card given a card number from this project
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.GetMurmurs">
+            <summary>
+            Returns murmurs from Mingle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.SendMurmur(System.String)">
+            <summary>
+            Sends a murmur to Mingle
+            </summary>
+            <param name="murmur"></param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProject.CreateCard(System.String,System.String)">
+            <summary>
+            Creates a new card
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.Mingle">
+            <summary>
+            MingleServer for the Mingle instance associated with this proejct
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.Team">
+            <summary>
+            Mingle users for this project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.Favorites">
+            <summary>
+            Mingle favorites/views for this project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.Properties">
+            <summary>
+            Mingle property definitions for this project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.Transitions">
+            <summary>
+            Transitions for this project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.Url">
+            <summary>
+            URL for the project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProject.CardTypes">
+            <summary>
+            Card Types for this project
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleMurmur">
+            <summary>
+            A Mingle murmur 
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleMurmur.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructs a new Murmur from an XElement payload
+            </summary>
+            <param name="xElement"></param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleMurmur.Body">
+            <summary>
+            Body of the Murmur
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleMurmur.CreatedAt">
+            <summary>
+            Date and time the murmur was created
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleMurmur.AuthorName">
+            <summary>
+            Author of the Murmur
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleMurmur.LoginName">
+            <summary>
+            Login of the author
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleMurmur.JabberName">
+            <summary>
+            Jabber client name
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleProjectMember">
+            <summary>
+            A Mingle project team member
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProjectMember.#ctor(System.String)">
+            <summary>
+            Constructs a MingleProjectMember from XML
+            </summary>
+            <param name="projectMember"></param>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.RawData">
+            <summary>
+            Returns an XElement backing this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.MemberId">
+            <summary>
+            Project member Id
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.ProjectAdmin">
+            <summary>
+            Indicates whether the project member is a project administrator
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.Readonly">
+            <summary>
+            Indicates whether this project member is a read-only member
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.UserId">
+            <summary>
+            User id
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.UserName">
+            <summary>
+            User name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.UserLogin">
+            <summary>
+            User login
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.UserEmail">
+            <summary>
+            User email
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.UserLight">
+            <summary>
+            Is user a light user?
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.UserIconPath">
+            <summary>
+            User icon path
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.ProjectUrl">
+            <summary>
+            Url for the project card
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.ProjectName">
+            <summary>
+            Name of the project
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMember.ProjectId">
+            <summary>
+            Id of the project
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MinglePropertyDefinition">
+            <summary>
+            A wrapper for a Mingle card property
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MinglePropertyDefinition.#ctor(System.String)">
+            <summary>
+             Constructs a new MinglePropertyDefinition from the XML of a property_definition
+             returned by Mingle's API
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.Id">
+            <summary>
+            Property Id
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.Name">
+            <summary>
+            Property name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.Description">
+            <summary>
+             Gets or sets description
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.DataType">
+            <summary>
+            gets or sets data_type
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.IsNumeric">
+            <summary>
+            Gets or sets numeric
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.Hidden">
+            <summary>
+            Gets or sets hidden
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.Restricted">
+            <summary>
+            Gets or sets restricted
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.IsTransitionOnly">
+            <summary>
+            Gets or sets transition_only
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.ProjectName">
+            <summary>
+            Gets or sets the project name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.ProjectId">
+            <summary>
+            Gets or sets the project identifier
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.ColumnName">
+            <summary>
+            Gets or sets the column_name
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.Position">
+            <summary>
+            Gets or sets the position
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.PropertyValuesDescription">
+            <summary>
+            Gets or sets the property_values_description
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.PropertyValueDetails">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.CardTypes">
+            <summary>
+            The list of card_type to which this Property applies
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.CardUrl">
+            <summary>
+            If Property.Type is card then this is the Url of the value card.
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.CurrentItem">
+            <summary>
+            Zero-based index of the current value of the Property among the PropertyValueDetails collection
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.IsSetValued">
+            <summary>
+            Indicates whether this property is single or set-valued
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.IsFormula">
+            <summary>
+            Indicates whether this property is formula-valued
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.IsCardValued">
+            <summary>
+            Indicates whether the property value is a set of cards
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MinglePropertyDefinition.IsTeamValued">
+            <summary>
+            Indicates whether the property value is a set of team members
+            </summary>
+        </member>
+        <member name="T:ThoughtWorksMingleLib.MingleProjectMemberCollection">
+            <summary>
+            An ObservableCollection of MingleProjectMember
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProjectMemberCollection.#ctor(ThoughtWorksMingleLib.MingleProject)">
+            <summary>
+            Constructs a MingleProjectMemberCollection
+            </summary>
+            <param name="project">MingleProject object</param>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProjectMemberCollection.Parse">
+            <summary>
+            Load a MingleObjectMember collection from Mingle
+            </summary>
+        </member>
+        <member name="M:ThoughtWorksMingleLib.MingleProjectMemberCollection.Parse(System.String)">
+            <summary>
+            Parses the results of Mingle's favorites.xml resource and populates the collection
+            </summary>
+            <param name="xml">Results of calling Mingle's API for the favorites.xml resource</param>
+            <returns></returns>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMemberCollection.Project">
+            <summary>
+            MingleProject associated with this object
+            </summary>
+        </member>
+        <member name="P:ThoughtWorksMingleLib.MingleProjectMemberCollection.ProjectId">
+            <summary>
+            Mingle project identifier
+            </summary>
+        </member>
+    </members>
+</doc>

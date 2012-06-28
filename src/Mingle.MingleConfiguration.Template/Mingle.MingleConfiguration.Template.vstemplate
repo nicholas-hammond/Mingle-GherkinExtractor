@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Mingle Configuration File</Name>
+    <Description>A file containing settings for accessing Mingle projects.</Description>
+    <Icon>Mingle.ico</Icon>
+    <TemplateID>cc6c01a7-5ca4-4361-a799-ec7e173e619e</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Mingle.config</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+		<References>
+			<Reference>
+				<Assembly>System</Assembly>
+			</Reference>
+		</References>
+
+    <ProjectItem ReplaceParameters="true">Mingle.config</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
