@@ -39,11 +39,16 @@
     <AssemblyOriginatorKeyFile>Assembly.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CredentialManagement, Version=1.0.1.0, Culture=neutral, PublicKeyToken=7c288afc9c6b6cc6, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\CredentialManagement.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="HtmlAgilityPack">
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.4.4\lib\Net40\HtmlAgilityPack.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Designer.Interfaces, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -59,27 +64,33 @@
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="ThoughtWorksCoreLib">
-      <HintPath>..\..\Library\ThoughtWorksCoreLib.dll</HintPath>
+    <Reference Include="ThoughtWorksCoreLib, Version=1.0.0.39622, Culture=neutral, PublicKeyToken=0de209e9319f2b06, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\ThoughtWorksCoreLib.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="ThoughtWorksMingleLib">
-      <HintPath>..\..\Library\ThoughtWorksMingleLib.dll</HintPath>
+    <Reference Include="ThoughtWorksMingleLib, Version=1.0.0.39623, Culture=neutral, PublicKeyToken=0de209e9319f2b06, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\ThoughtWorksMingleLib.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyExtensions.cs" />
     <Compile Include="Gherkin.cs" />
     <Compile Include="GherkinCard.cs" />
     <Compile Include="GherkinCardConfiguration.cs" />
     <Compile Include="GherkinCardDownloader.cs" />
     <Compile Include="MingleCardEmptyException.cs" />
     <Compile Include="MingleConfiguration.cs" />
+    <Compile Include="MingleCredential.cs" />
     <Compile Include="MingleProjectConfiguration.cs" />
     <Compile Include="MingleServerConfiguration.cs" />
+    <Compile Include="MingleWebExeptionExtensions.cs" />
     <Compile Include="ProjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vs2010\CodeGeneratorLanguageAttribute.cs" />
@@ -92,18 +103,23 @@
     <Compile Include="Vs2010\SingleFileGeneratorError.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\CredentialManagement.dll" />
+    <EmbeddedResource Include="Resources\HtmlAgilityPack.dll" />
+    <EmbeddedResource Include="Resources\ThoughtWorksCoreLib.dll" />
+    <EmbeddedResource Include="Resources\ThoughtWorksMingleLib.dll" />
     <None Include="Assembly.snk" />
-    <None Include="packages.config" />
     <None Include="Install.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Register.reg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="packages.config" />
     <None Include="Uninstall.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

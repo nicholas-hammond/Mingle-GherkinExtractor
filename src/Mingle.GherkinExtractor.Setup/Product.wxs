@@ -7,12 +7,15 @@
 
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLLOCATION" Name="Mingle.GherkinExtractor.Setup">
-					<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-					<!-- <Component Id="ProductComponent" Guid="ed1e9b26-baf8-46b5-a02b-22bf0453a39b"> -->
-						<!-- TODO: Insert files, registry keys, and other resources here. -->
-					<!-- </Component> -->
-				</Directory>
+				<Directory Id="ProductDirectory" Name="$(var.ProductName)">
+          <Directory Id="GAC" Name="GAC">
+            <Component Id="Mingle.GherkinExtractor" Guid="55857611-A13E-51ED-897B-A78830F68ADC" DiskId="1">
+              <!-- Registering assembly in GAC -->
+              <File Id="Mingle.GherkinExtractor" Name="Mingle.GherkinExtractor.dll" LongName="Mingle.GherkinExtractor.dll" Source="$(var.SrcPath)
+               \Mingle.GherkinExtractor.dll" KeyPath="yes" Assembly=".net"/>
+            </Component>
+          </Directory>
+        </Directory>
 			</Directory>
 		</Directory>
 

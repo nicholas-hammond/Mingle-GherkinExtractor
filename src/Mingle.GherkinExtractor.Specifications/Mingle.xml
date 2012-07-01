@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <mingle >
-  <server hostUrl = "http://172.16.100.137:8080" loginName="fred" password = "somepassword" />
+  <server hostUrl = "http://172.16.100.137:8080" />
   <project id = "my_easyjet" />
 </mingle>

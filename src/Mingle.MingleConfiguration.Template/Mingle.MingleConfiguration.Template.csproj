@@ -52,7 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Mingle.MingleConfiguration.Template.vstemplate" />
+    <VSTemplate Include="Mingle.MingleConfiguration.Template.vstemplate">
+      <SubType>Designer</SubType>
+    </VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mingle.ico">

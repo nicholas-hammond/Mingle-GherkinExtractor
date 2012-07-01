@@ -6,11 +6,5 @@ namespace Mingle.GherkinExtractor
     {
         [XmlAttribute("hostUrl")]
         public string HostUrl { get; set; }
-
-        [XmlAttribute("loginName")]
-        public string LoginName { get; set; }
-
-        [XmlAttribute("password")]
-        public string Password { get; set; }
     }
 }

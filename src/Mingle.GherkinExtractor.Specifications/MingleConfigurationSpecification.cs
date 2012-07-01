@@ -34,11 +34,6 @@ namespace Mingle.GherkinExtractor.Specifications
             "Expect the server url to be set"
                 .Assert(() => configuration.Server.HostUrl.Should().Be("http://172.16.100.137:8080"));
 
-            "Expect the server login name to be set"
-                .Assert(() => configuration.Server.LoginName.Should().Be("fred"));
-
-            "Expect the server password to be set"
-               .Assert(() => configuration.Server.Password.Should().Be("somepassword"));
         }
 
 

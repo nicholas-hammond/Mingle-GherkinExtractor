@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,62 +38,44 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TechTalk.SpecFlow">
-      <HintPath>..\packages\SpecFlow.1.8.1\lib\net35\TechTalk.SpecFlow.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gherkin1.feature.cs">
+    <Compile Include="PassengerNameChange\Gherkin1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Gherkin1.feature</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecFlowFeature1.feature.cs">
+    <Compile Include="PassengerNameChange\SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
     </Compile>
-    <Compile Include="StoryCard_123.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoryCard_123.feature</DependentUpon>
-    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Gherkin1.card">
+    <None Include="Mingle.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PassengerNameChange\Gherkin1.card">
       <Generator>GherkinCardToFeatureFileGenerator</Generator>
       <LastGenOutput>Gherkin1.feature</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="Gherkin1.feature">
+    <None Include="PassengerNameChange\Gherkin1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Gherkin1.card</DependentUpon>
       <LastGenOutput>Gherkin1.feature.cs</LastGenOutput>
     </None>
-    <None Include="Mingle.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="packages.config" />
-    <None Include="SpecFlowFeature1.feature">
+    <None Include="PassengerNameChange\SpecFlowFeature1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature1.feature.cs</LastGenOutput>
     </None>
-    <None Include="StoryCard_123.card">
-      <Generator>GherkinCardToFeatureFileGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>StoryCard_123.feature</LastGenOutput>
-    </None>
-    <None Include="StoryCard_123.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoryCard_123.card</DependentUpon>
-      <LastGenOutput>StoryCard_123.feature.cs</LastGenOutput>
-    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

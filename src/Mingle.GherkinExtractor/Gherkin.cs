@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Web;
 using HtmlAgilityPack;
 
 namespace Mingle.GherkinExtractor
@@ -23,7 +24,9 @@ namespace Mingle.GherkinExtractor
 
             foreach (var node in nodes)
             {
-                builder.AppendLine(node.InnerText);
+                var innerText = node.InnerText;
+                var gherkinContent = HttpUtility.HtmlDecode(innerText);
+                builder.AppendLine(gherkinContent);
             }
 
             var text = builder.ToString().TrimEnd(Environment.NewLine.ToCharArray());

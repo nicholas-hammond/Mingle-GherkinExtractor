@@ -3,7 +3,7 @@ using Mingle.GherkinExtractor.Specifications.SubSpec;
 
 namespace Mingle.GherkinExtractor.Specifications
 {
-    public class GherkinSpecifications
+    public class GherkinSpecifications : SpecificationsBase
     {
         [Specification]
         public void CreatingFromHtml()

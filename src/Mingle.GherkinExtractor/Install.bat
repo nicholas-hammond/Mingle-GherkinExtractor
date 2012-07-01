@@ -1,10 +1,8 @@
 CLS
-RegAsm.exe HtmlAgilityPack.dll 
-GacUtil.exe /i HtmlAgilityPack.dll
-RegAsm.exe ThoughtWorksCoreLib.dll 
-GacUtil.exe /i ThoughtWorksCoreLib.dll
-RegAsm.exe ThoughtWorksMingleLib.dll 
-GacUtil.exe /i ThoughtWorksMingleLib.dll
+
+SET PATH=C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\x64
+
+
 RegAsm.exe Mingle.GherkinExtractor.dll 
 GacUtil.exe /i Mingle.GherkinExtractor.dll
 

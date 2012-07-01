@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
@@ -16,8 +17,14 @@ namespace Mingle.GherkinExtractor.Vs2010
     [ProvideObject(typeof (GherkinCardToFeatureFileGenerator))]
     public class GherkinCardToFeatureFileGenerator : SingleFileGeneratorBase
     {
+        static GherkinCardToFeatureFileGenerator()
+        {
+            typeof(GherkinCardToFeatureFileGenerator).Assembly.LoadDependencies();
+        }   
+
         public GherkinCardToFeatureFileGenerator() : base(".card")
         {
+           
         }
 
 
