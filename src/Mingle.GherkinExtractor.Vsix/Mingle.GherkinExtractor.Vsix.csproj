@@ -8,8 +8,8 @@
     <ProjectGuid>{6D657CC8-E95D-47D4-A49B-D8F76C8BBF69}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mingle.GherkinExtractor.Vsix</RootNamespace>
-    <AssemblyName>Mingle.GherkinExtractor.Vsix</AssemblyName>
+    <RootNamespace>Mingle.GherkinExtractor</RootNamespace>
+    <AssemblyName>Mingle.GherkinExtractor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>

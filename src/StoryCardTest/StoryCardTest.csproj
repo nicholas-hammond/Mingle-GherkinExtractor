@@ -40,11 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PassengerNameChange\Gherkin1.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Gherkin1.feature</DependentUpon>
-    </Compile>
     <Compile Include="PassengerNameChange\SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -57,18 +52,8 @@
     <None Include="Mingle.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
-    <None Include="PassengerNameChange\Gherkin1.card">
-      <Generator>GherkinCardToFeatureFileGenerator</Generator>
-      <LastGenOutput>Gherkin1.feature</LastGenOutput>
+    <None Include="packages.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="PassengerNameChange\Gherkin1.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Gherkin1.card</DependentUpon>
-      <LastGenOutput>Gherkin1.feature.cs</LastGenOutput>
     </None>
     <None Include="PassengerNameChange\SpecFlowFeature1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

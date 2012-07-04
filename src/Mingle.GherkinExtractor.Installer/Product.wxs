@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:vs="http://schemas.microsoft.com/wix/VSExtension">
+
+  <!-- Define variables for high-level constants used throughout the script -->
+  <?define CompanyName="easyJet"?>
+  <?define Version="1.0.0.0"?>
+  <?define ProductName="Mingle Gherkin extraction tool for Visual Studio 2010"?>
+  <?define ProductShortName="Mingle Gherkin Extractor"?>
+
+  <!-- Define the product to be installed -->
+  <Product Id="7a4c8220-d019-4e4b-8c17-a00a92e1de2a" Name="$(var.ProductName)" Language="1033" Version="$(var.VersionNumber)" Manufacturer="$(var.CompanyName)" UpgradeCode="e4aae7c5-5162-40d5-be01-2dba3f74bcd3">
+        
+    <!-- Create a compressed package -->
+    <Package InstallerVersion="200" Compressed="yes" Manufacturer="$(var.CompanyName)" />
+
+    <!-- Embed the compressed package into the installer -->
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+
+    <!-- Define the application icon -->
+    <Icon Id="ApplicationIcon" SourceFile="Mingle.ico" />
+
+    <!-- Add/Remove Programs (ARP) functionality for Control Panel -->
+    <!-- Disable the "Modify" option -->
+    <Property Id="ARPNOMODIFY" Value="1" />
+
+    <!-- Define the icon to use -->
+    <Property Id="ARPPRODUCTICON" Value="ApplicationIcon" />
+
+
+    <!-- Define basic folder installation structure -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder" >
+        <Directory Id="TargetInstallFolder" Name="$(var.CompanyName)">
+        <Component Id="Mingle.GherkinExtractor.dll" Guid="c830da41-2388-4409-9b0e-ee863a69fb6c">
+          <Class Id="{365B4095-8E2A-44AA-9BC2-D917EE97C33C}" Context="InprocServer32" Description="Mingle.GherkinExtractor.Vs2010.GherkinCardToFeatureFileGenerator" ThreadingModel="both" ForeignServer="mscoree.dll">
+            <ProgId Id="GherkinCardToFeatureFileGenerator" Description="Mingle.GherkinExtractor.Vs2010.GherkinCardToFeatureFileGenerator" />
+          </Class>
+          <File Id="Mingle.GherkinExtractor.dll" Name="Mingle.GherkinExtractor.dll" KeyPath="yes" Assembly=".net" Source="$(var.Mingle.GherkinExtractor.TargetDir)Mingle.GherkinExtractor.dll"  />
+          <RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+          <RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32\1.0.0.0" Name="Class" Value="Mingle.GherkinExtractor.Vs2010.GherkinCardToFeatureFileGenerator" Type="string" Action="write" />
+          <RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32\1.0.0.0" Name="Assembly" Value="Mingle.GherkinExtractor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=33b414ca2ca3f26c" Type="string" Action="write" />
+          <RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+          <!--<RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil309E9B23D4842CE9CC5C9B4DA243490E]" Type="string" Action="write" />-->
+          <RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32" Name="Class" Value="Mingle.GherkinExtractor.Vs2010.GherkinCardToFeatureFileGenerator" Type="string" Action="write" />
+          <RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32" Name="Assembly" Value="Mingle.GherkinExtractor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=33b414ca2ca3f26c" Type="string" Action="write" />
+          <RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+          <!--<RegistryValue Root="HKCR" Key="CLSID\{365B4095-8E2A-44AA-9BC2-D917EE97C33C}\InprocServer32" Name="CodeBase" Value="file:///[#fil309E9B23D4842CE9CC5C9B4DA243490E]" Type="string" Action="write" />-->
+
+          <!-- Visual Studio Registration-->
+          <RegistryValue Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\10.0\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\GherkinCardToFeatureFileGenerator" Value="Generator for converting mingle cards containing Gherkin syntax to feature files" Type="string" Action="write" />
+          <RegistryValue Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\10.0\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\GherkinCardToFeatureFileGenerator" Name="CLSID" Value="{365B4095-8E2A-44AA-9BC2-D917EE97C33C}" Type="string" Action="write" />
+          <RegistryValue Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\10.0\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\GherkinCardToFeatureFileGenerator" Name="GeneratesDesignTimeSource" Value="1" Type="integer" Action="write" />
+        </Component>
+
+        <!-- Vsix Registration -->
+        <Component Id = "Mingle.GherkinExtractor.Vsix" Guid="0148f8e3-2080-42af-826e-1284d26e0aa8">
+          <File Id="Mingle.GherkinExtractor.Vsix" Name="Mingle.GherkinExtractor.Vsix" KeyPath="yes"  Source="$(var.Mingle.GherkinExtractor.Vsix.TargetDir)Mingle.GherkinExtractor.Vsix">
+            <vs:VsixPackage PackageId="Mingle.GherkinExtractor.Vsix..95d9f9e1-2d02-496c-a4f0-b24019884bf0"  />
+          </File>  
+          
+        </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+       
+    <!-- Defines the features that will be installed. -->
+    <Feature Id="ProductFeature" Title="Mingle Gherkin Extractor" Level="1" Description="Visual Studio tool for extracting Gherkin from mingle." Display="expand" >
+          <ComponentRef Id="Mingle.GherkinExtractor.dll" />
+          <ComponentRef Id="Mingle.GherkinExtractor.Vsix" />
+    </Feature>
+
+    <!-- Define the UI required for the installation -->
+    <UI>
+      <UIRef Id="WixUI_DialogSet" />
+    </UI>
+
+  </Product>
+
+  <!-- Define a custom UI sequence -->
+  <Fragment>
+    <!-- Based on the template in WixUI_Minimal.wxs -->
+    <UI Id="WixUI_DialogSet">
+      <!-- Standard font definitions -->
+      <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+      <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+      <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+
+      <!-- Required dialog boxes -->
+      <DialogRef Id="ErrorDlg" />
+      <DialogRef Id="ExitDialog"/>
+      <DialogRef Id="FatalError" />
+      <DialogRef Id="FilesInUse" />
+      <DialogRef Id="UserExit" />
+
+      <!-- Referencing the WelcomeDlg automatically pulls in the correct default <InstallUISequence> node -->
+      <DialogRef Id="WelcomeDlg" />
+
+      <!-- Define the steps in the UI -->
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">1</Publish>
+      <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+    </UI>
+
+    <!-- Reference all standard WixUI functionality -->
+    <UIRef Id="WixUI_Common" />
+  </Fragment>
+
+</Wix>

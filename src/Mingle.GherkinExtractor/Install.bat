@@ -4,7 +4,7 @@ SET PATH=C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\Mi
 
 
 RegAsm.exe Mingle.GherkinExtractor.dll 
-GacUtil.exe /i Mingle.GherkinExtractor.dll
+REM GacUtil.exe /i Mingle.GherkinExtractor.dll
 
 regedit /s Register.reg
 
