@@ -5,14 +5,16 @@ namespace Mingle.GherkinExtractor
     /// </summary>
     public class GherkinCard
     {
-        public GherkinCard(string content, string url)
+        public GherkinCard(string name, string content, string url)
         {
             Url = url;
             Content = content;
+        	Name = name;
         }
 
         public string Content { get; private set; }
         public string Url { get; private set; }
+		public string Name { get; private set; }
 
         public bool HasNoContent
         {
