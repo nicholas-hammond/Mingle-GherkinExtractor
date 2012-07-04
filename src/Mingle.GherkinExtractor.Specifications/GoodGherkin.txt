@@ -1,4 +1,6 @@
-﻿Background:
+﻿Feature: My Test Feature
+
+Background:
 
     Given I am signed in as an admin
 

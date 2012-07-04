@@ -32,7 +32,7 @@ namespace Mingle.GherkinExtractor
                 try
                 {
                     MingleCard card = project.GetCard(gherkinCardConfiguration.Number);
-                    return new GherkinCard(card.Description, card.Url);
+                    return new GherkinCard(card.Name, card.Description, card.Url);
                 }
                 catch (MingleWebException e)
                 {
