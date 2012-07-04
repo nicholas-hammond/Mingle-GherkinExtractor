@@ -22,7 +22,7 @@ namespace Mingle.GherkinExtractor.Specifications
             "When creating from html"
                 .Do(() =>
                         {
-                            gherkin = Gherkin.FromHtml(html);
+                            gherkin = Gherkin.FromHtml("My Test Feature", html);
                         });
 
             "Expect the gherkin string to be same as the good text gherkin"

@@ -14,7 +14,7 @@ namespace Mingle.GherkinExtractor
             _content = content;
         }
 
-        public static Gherkin FromHtml(string html)
+        public static Gherkin FromHtml(string name, string html)
         {
             HtmlDocument document = new HtmlDocument();
             document.LoadHtml(html);
@@ -22,6 +22,10 @@ namespace Mingle.GherkinExtractor
 
             StringBuilder builder = new StringBuilder();
 
+        	builder.Append("Feature: ");
+        	builder.Append(name);
+        	builder.Append("\n\n");
+        	
             foreach (var node in nodes)
             {
                 var innerText = node.InnerText;

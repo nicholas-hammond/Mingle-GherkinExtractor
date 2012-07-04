@@ -44,9 +44,9 @@ namespace Mingle.GherkinExtractor.Vs2010
             {
                 throw new MingleCardNoContentException();
             }
-            
 
-            var gherkin = Gherkin.FromHtml(gherkinCard.Content); 
+
+			var gherkin = Gherkin.FromHtml(gherkinCard.Name, gherkinCard.Content); 
 
             generatedContent = gherkin.ToString();
 
