@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using ThoughtWorksMingleLib;
 
 namespace Mingle.GherkinExtractor
@@ -34,8 +35,7 @@ namespace Mingle.GherkinExtractor
                 try
                 {
                     MingleCard card = project.GetCard(gherkinCardConfiguration.Number);
-
-                    var uri = new Uri(new Uri(new Uri(serverConfig.HostUrl), projectConfig.Id), card.Url);
+					var uri = new Uri(new Uri(serverConfig.HostUrl), "/projects/" + project.ProjectId + Path.ChangeExtension(card.Url, ""));
                          
                     return new GherkinCard(card.Name, card.Description, uri.ToString());
                 }

@@ -111,6 +111,9 @@
     <None Include="Install.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="Mingle.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Register.reg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
