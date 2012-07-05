@@ -22,7 +22,7 @@ namespace Mingle.GherkinExtractor
 
             StringBuilder builder = new StringBuilder();
 
-            builder.AppendFormat("#{0}\n", card.Url);
+            builder.AppendFormat("# {0}\n", card.Url);
         	builder.Append("Feature: ");
         	builder.Append(card.Name);
         	builder.Append("\n\n");

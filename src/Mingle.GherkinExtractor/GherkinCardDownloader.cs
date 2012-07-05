@@ -1,3 +1,4 @@
+using System;
 using ThoughtWorksMingleLib;
 
 namespace Mingle.GherkinExtractor
@@ -29,10 +30,14 @@ namespace Mingle.GherkinExtractor
                                                         credential.SecurePassword);
                 MingleProject project = server.GetProject(projectConfig.Id);
 
+                
                 try
                 {
                     MingleCard card = project.GetCard(gherkinCardConfiguration.Number);
-                    return new GherkinCard(card.Name, card.Description, card.Url);
+
+                    var uri = new Uri(new Uri(new Uri(serverConfig.HostUrl), projectConfig.Id), card.Url);
+                         
+                    return new GherkinCard(card.Name, card.Description, uri.ToString());
                 }
                 catch (MingleWebException e)
                 {
