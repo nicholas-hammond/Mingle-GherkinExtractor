@@ -49,9 +49,21 @@
           <!-- Visual Studio Registration-->
           <RegistryValue Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\10.0\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\GherkinCardToFeatureFileGenerator" Value="Generator for converting mingle cards containing Gherkin syntax to feature files" Type="string" Action="write" />
           <RegistryValue Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\10.0\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\GherkinCardToFeatureFileGenerator" Name="CLSID" Value="{365B4095-8E2A-44AA-9BC2-D917EE97C33C}" Type="string" Action="write" />
-          <RegistryValue Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\10.0\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\GherkinCardToFeatureFileGenerator" Name="GeneratesDesignTimeSource" Value="1" Type="integer" Action="write" />
-        </Component>
+		  <RegistryValue Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\10.0\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\GherkinCardToFeatureFileGenerator" Name="GeneratesDesignTimeSource" Value="1" Type="integer" Action="write" />
 
+
+
+		</Component>
+
+		<!-- .Card icon -->			
+		<Component Id="Mingle.GherkinExtractor.Icon" Guid="788E6BD9-4F30-4306-8EC5-7FEB75381671">
+			<File Id="Mingle.ico" Source="$(var.Mingle.GherkinExtractor.Vsix.TargetDir)\Mingle.ico" KeyPath="yes"/>
+			<RegistryValue Root="HKCR" Key=".card" Value="Mingle.GherkinExtractorCard.1" Type="string" Action="write" />
+			<RegistryValue Root="HKCR" Key="Software\Classes\.card" Value="Mingle.GherkinExtractorCard.1" Type="string" Action="write" />
+			<RegistryValue Root="HKCR" Key="Mingle.GherkinExtractorCard.1" Name="AlwaysShowExt" Value="1" Type="string" Action="write" />
+			<RegistryValue Root="HKCR" Key="Mingle.GherkinExtractorCard.1\DefaultIcon" Value="[TargetInstallFolder]Mingle.ico" Type="string" Action="write" />
+		</Component>
+				
         <!-- Vsix Registration -->
         <Component Id = "Mingle.GherkinExtractor.Vsix" Guid="0148f8e3-2080-42af-826e-1284d26e0aa8">
           <File Id="Mingle.GherkinExtractor.Vsix" Name="Mingle.GherkinExtractor.Vsix" KeyPath="yes"  Source="$(var.Mingle.GherkinExtractor.Vsix.TargetDir)Mingle.GherkinExtractor.Vsix">
@@ -65,8 +77,9 @@
        
     <!-- Defines the features that will be installed. -->
     <Feature Id="ProductFeature" Title="Mingle Gherkin Extractor" Level="1" Description="Visual Studio tool for extracting Gherkin from mingle." Display="expand" >
-          <ComponentRef Id="Mingle.GherkinExtractor.dll" />
-          <ComponentRef Id="Mingle.GherkinExtractor.Vsix" />
+		<ComponentRef Id="Mingle.GherkinExtractor.Icon" />
+		<ComponentRef Id="Mingle.GherkinExtractor.dll" />
+        <ComponentRef Id="Mingle.GherkinExtractor.Vsix" />
     </Feature>
 
     <!-- Define the UI required for the installation -->
