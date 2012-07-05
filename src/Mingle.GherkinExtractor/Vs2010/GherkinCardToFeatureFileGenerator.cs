@@ -46,7 +46,7 @@ namespace Mingle.GherkinExtractor.Vs2010
             }
 
 
-			var gherkin = Gherkin.FromHtml(gherkinCard.Name, gherkinCard.Content); 
+			var gherkin = Gherkin.FromHtml(gherkinCard); 
 
             generatedContent = gherkin.ToString();
 

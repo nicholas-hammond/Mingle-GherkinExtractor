@@ -14,16 +14,17 @@ namespace Mingle.GherkinExtractor
             _content = content;
         }
 
-        public static Gherkin FromHtml(string name, string html)
+        public static Gherkin FromHtml(GherkinCard card)
         {
             HtmlDocument document = new HtmlDocument();
-            document.LoadHtml(html);
+            document.LoadHtml(card.Content);
             var nodes = document.DocumentNode.SelectNodes("//pre[@class='Gherkin']");
 
             StringBuilder builder = new StringBuilder();
 
+            builder.AppendFormat("#{0}\n", card.Url);
         	builder.Append("Feature: ");
-        	builder.Append(name);
+        	builder.Append(card.Name);
         	builder.Append("\n\n");
         	
             foreach (var node in nodes)
