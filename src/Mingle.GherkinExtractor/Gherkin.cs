@@ -25,7 +25,6 @@ namespace Mingle.GherkinExtractor
 
             builder.AppendFormat("# {0}\n", card.Url);
             builder.Append(String.Join(" ", card.FeatureTags.Select(t => string.Format("@{0}", t.ToLowerInvariant()))));
-            //builder.Append(card.FeatureTags..Select(t => string.Format("@{0} ", t.ToLowerInvariant())));
             builder.Append("\n");
         	builder.Append("Feature: ");
         	builder.Append(card.Name);
