@@ -1,4 +1,5 @@
 ﻿# http://mingle
+@test1 @test2
 Feature: My Test Feature
 
 Background:

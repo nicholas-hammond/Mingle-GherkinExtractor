@@ -37,7 +37,7 @@ namespace Mingle.GherkinExtractor
                     MingleCard card = project.GetCard(gherkinCardConfiguration.Number);
 					var uri = new Uri(new Uri(serverConfig.HostUrl), "/projects/" + project.ProjectId + Path.ChangeExtension(card.Url, ""));
                          
-                    return new GherkinCard(card.Name, card.Description, uri.ToString());
+                    return new GherkinCard(card.Name, new string[]{},  card.Description, uri.ToString());
                 }
                 catch (MingleWebException e)
                 {

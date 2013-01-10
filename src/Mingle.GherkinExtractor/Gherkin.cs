@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using System.Web;
 using HtmlAgilityPack;
@@ -23,6 +24,9 @@ namespace Mingle.GherkinExtractor
             StringBuilder builder = new StringBuilder();
 
             builder.AppendFormat("# {0}\n", card.Url);
+            builder.Append(String.Join(" ", card.FeatureTags.Select(t => string.Format("@{0}", t.ToLowerInvariant()))));
+            //builder.Append(card.FeatureTags..Select(t => string.Format("@{0} ", t.ToLowerInvariant())));
+            builder.Append("\n");
         	builder.Append("Feature: ");
         	builder.Append(card.Name);
         	builder.Append("\n\n");
