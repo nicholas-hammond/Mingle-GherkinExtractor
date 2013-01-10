@@ -9,7 +9,6 @@ namespace Mingle.GherkinExtractor.Specifications
         public void CreatingFromHtml()
         {
             GherkinCard card = null;
-            string html = null;
             string text = null;
             Gherkin gherkin = null;
 
@@ -17,22 +16,36 @@ namespace Mingle.GherkinExtractor.Specifications
                 .Context(() =>
                              {
                                  
-                                 html = Resource.GetString("GoodGherkin.htm");
+                                 var html = Resource.GetString("GoodGherkin.htm");
                                  text = Resource.GetString("GoodGherkin.txt");
                                  card = new GherkinCard("My Test Feature", new[]{"Test1", "Test2"}, html, "http://mingle");
                              });
 
-            "When creating from html"
-                .Do(() =>
-                        {
-                            gherkin = Gherkin.FromHtml(card);
-                        });
+            "When creating from html".Do(() => gherkin = Gherkin.FromHtml(card));
 
             "Expect the gherkin string to be same as the good text gherkin"
-                .Assert(() =>
+                .Assert(() => gherkin.ToString().Should().Be(text));
+        }
+
+        [Specification]
+        public void CreatingWithoutFeatureTags()
+        {
+            GherkinCard card = null;
+            string text = null;
+            Gherkin gherkin = null;
+
+            "Given some html in a known format without any feature tags"
+                .Context(() =>
                             {
-                                gherkin.ToString().Should().Be(text);
+                                var html = Resource.GetString("GoodGherkin.htm");
+                                text = Resource.GetString("GoodGherkinWithoutFeatureTags.txt");
+                                card = new GherkinCard("My Test Feature", new string[] { }, html, "http://mingle");
                             });
+
+            "When creating from html".Do(() => gherkin = Gherkin.FromHtml(card));
+
+            "Expect the gherkin string to be same as the good text gherkin excluding feature tags"
+                .Assert(() => gherkin.ToString().Should().Be(text));
         }
 
       
