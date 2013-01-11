@@ -35,7 +35,7 @@ namespace Mingle.GherkinExtractor
             {
                 var innerText = node.InnerText;
                 var gherkinContent = HttpUtility.HtmlDecode(innerText);
-                gherkinContent = Regex.Replace(gherkinContent, "@[A-Z]*", match => match.Value.ToLowerInvariant());
+                gherkinContent = Regex.Replace(gherkinContent, "@[A-Za-z0-9]*", match => match.Value.ToLowerInvariant());
                 builder.AppendLine(gherkinContent);
             }
 
