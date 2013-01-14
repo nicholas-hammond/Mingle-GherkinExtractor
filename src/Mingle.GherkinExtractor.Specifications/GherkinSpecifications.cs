@@ -18,7 +18,7 @@ namespace Mingle.GherkinExtractor.Specifications
                                  
                                  var html = Resource.GetString("GoodGherkin.htm");
                                  text = Resource.GetString("GoodGherkin.txt");
-                                 card = new GherkinCard("My Test Feature", new[]{"Test1", "Test2"}, html, "http://mingle");
+                                 card = new GherkinCard("My Test Feature", new[]{"@Test1", "@Test2"}, html, "http://mingle");
                              });
 
             "When creating from html".Do(() => gherkin = Gherkin.FromHtml(card));
