@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using HtmlAgilityPack;
 
@@ -24,7 +25,7 @@ namespace Mingle.GherkinExtractor
             StringBuilder builder = new StringBuilder();
 
             builder.AppendFormat("# {0}\n", card.Url);
-            builder.Append(String.Join(" ", card.FeatureTags.Select(t => string.Format("@{0}", t.ToLowerInvariant()))));
+            builder.Append(String.Join(" ", card.FeatureTags.Select(t => t.ToLowerInvariant())));
             builder.Append("\n");
         	builder.Append("Feature: ");
         	builder.Append(card.Name);
@@ -34,6 +35,7 @@ namespace Mingle.GherkinExtractor
             {
                 var innerText = node.InnerText;
                 var gherkinContent = HttpUtility.HtmlDecode(innerText);
+                gherkinContent = Regex.Replace(gherkinContent, "@[A-Za-z0-9_-]*", match => match.Value.ToLowerInvariant());
                 builder.AppendLine(gherkinContent);
             }
 

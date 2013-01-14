@@ -57,7 +57,7 @@ namespace Mingle.GherkinExtractor
             
             if(mingleCardPropertyCollection.ContainsKey("FeatureTag") && !mingleCardPropertyCollection["FeatureTag"].IsValueNil)
             {
-                tags = new[] {mingleCardPropertyCollection["FeatureTag"].Value};
+                tags = mingleCardPropertyCollection["FeatureTag"].Value.Split(',', ' ');
             }
             
             return tags;
